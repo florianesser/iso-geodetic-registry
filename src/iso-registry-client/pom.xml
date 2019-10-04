@@ -532,24 +532,28 @@
 				<activeByDefault>false</activeByDefault>
 			</activation>
 			<properties>
-				<hibernate.connection.username>~~PgUser~~</hibernate.connection.username>
-				<hibernate.connection.password>~~PgPassword~~</hibernate.connection.password>
-				<hibernate.connection.url>jdbc:postgresql://~~PgHost~~:~~PgPort~~/~~PgDatabase~~</hibernate.connection.url>
+				<hibernate.connection.username>isoreg</hibernate.connection.username>
+				<hibernate.connection.password>isoreg</hibernate.connection.password>
+				<hibernate.connection.schema>public</hibernate.connection.schema>
+				<hibernate.connection.url>jdbc:postgresql://db:5432/isoreg</hibernate.connection.url>
 				<hibernate.hbm2ddl.auto>validate</hibernate.hbm2ddl.auto>
-				<hibernate.show_sql>false</hibernate.show_sql>
 				<flyway.migration>true</flyway.migration>
-				<client.basepath>~/~~ClientProxyBasePathGui~~</client.basepath>
-				<mail.enabled>~~MailEnabled~~</mail.enabled>
-				<mail.from.name>~~MailFromName~~</mail.from.name>
-				<mail.from.address>~~MailFromAddress~~</mail.from.address>
-				<mail.smtp.auth>~~MailSmtpAuth~~</mail.smtp.auth>
-				<mail.smtp.user>~~MailSmtpUser~~</mail.smtp.user>
-				<mail.smtp.password>~~MailSmtpPassword~~</mail.smtp.password>
-				<mail.smtp.starttls.enable>~~MailSmtpStarttlsEnable~~</mail.smtp.starttls.enable>
-				<mail.smtp.host>~~MailSmtpHost~~</mail.smtp.host>
-				<mail.smtp.port>~~MailSmtpPort~~</mail.smtp.port>
-				<client.signup.sendConfirmationMails>~~ClientSignupSendConfirmationMails~~</client.signup.sendConfirmationMails>
-				<client.signup.confirmationUrl>~~ClientProxyScheme~~://~~ClientProxyName~~:~~ClientProxyPort~~/~~ClientProxyBasePathGui~~/signup/confirmation</client.signup.confirmationUrl>
+				<client.basepath></client.basepath>
+				<registry.demoMode>true</registry.demoMode>
+				<client.signup.enabled>true</client.signup.enabled>
+				<basePackages>de.geoinfoffm.registry,de.bespire.registry,org.iso.registry</basePackages>
+				<mail.enabled>false</mail.enabled>
+				<mail.from.name>ISO Geodetic Registry</mail.from.name>
+				<mail.from.address></mail.from.address>
+				<mail.smtp.auth></mail.smtp.auth>
+				<mail.smtp.starttls.enable></mail.smtp.starttls.enable>
+				<mail.smtp.host></mail.smtp.host>
+				<mail.smtp.port></mail.smtp.port>
+				<mail.smtp.user></mail.smtp.user>
+				<mail.smtp.password></mail.smtp.password>
+				<gml.identifier.baseurl></gml.identifier.baseurl>
+				<gml.identifier.pathpattern>register/geodetic/items/%d</gml.identifier.pathpattern>
+				<register.aliases>geodetic:ISO Geodetic Register</register.aliases>
 			</properties>
 			<build>
 				<finalName>isoreg</finalName>
